@@ -57,6 +57,13 @@ int main () {
                     cout << endl;
                     break;
                 }
+                case 'S': case 's': {
+                    cout << "Sorted list of nodes" << endl;
+                    A.getSortedList();
+                    A.getList();
+                    cout << endl;
+                    break;
+                }
                 default: {
                     cout << "Invalid function entered." << endl;
                     break;

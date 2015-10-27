@@ -33,6 +33,10 @@ public:
     void getList ();
     Node* findNode (string);
     void  deleteNode (string);
+    void getSortedList2();
+    void getSortedList();
+
+    //bool swap(Node*, Node*);
 private:
     Node* ListPointer;
 };
