@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F74D25661BDEF24B0098DC27 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74D25651BDEF24B0098DC27 /* main.cpp */; };
 		F74D256D1BDEF33B0098DC27 /* BagMenuProg3B_wc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74D256C1BDEF33B0098DC27 /* BagMenuProg3B_wc.cpp */; };
+		F7FB46E81BE01A0900B2BFD1 /* ArrayListProg4_wClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7FB46E71BE01A0900B2BFD1 /* ArrayListProg4_wClass.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		F74D25651BDEF24B0098DC27 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F74D256C1BDEF33B0098DC27 /* BagMenuProg3B_wc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BagMenuProg3B_wc.cpp; sourceTree = "<group>"; };
 		F74D256E1BDEF3C40098DC27 /* BagMenuProg3B_wc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BagMenuProg3B_wc.h; sourceTree = "<group>"; };
+		F7FB46E71BE01A0900B2BFD1 /* ArrayListProg4_wClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayListProg4_wClass.cpp; sourceTree = "<group>"; };
+		F7FB46E91BE01AA300B2BFD1 /* ArrayListProg4_wClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayListProg4_wClass.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +63,11 @@
 		F74D25641BDEF24B0098DC27 /* CS341_Midterm */ = {
 			isa = PBXGroup;
 			children = (
-				F74D25651BDEF24B0098DC27 /* main.cpp */,
+				F7FB46E71BE01A0900B2BFD1 /* ArrayListProg4_wClass.cpp */,
+				F7FB46E91BE01AA300B2BFD1 /* ArrayListProg4_wClass.h */,
 				F74D256C1BDEF33B0098DC27 /* BagMenuProg3B_wc.cpp */,
 				F74D256E1BDEF3C40098DC27 /* BagMenuProg3B_wc.h */,
+				F74D25651BDEF24B0098DC27 /* main.cpp */,
 			);
 			path = CS341_Midterm;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FB46E81BE01A0900B2BFD1 /* ArrayListProg4_wClass.cpp in Sources */,
 				F74D256D1BDEF33B0098DC27 /* BagMenuProg3B_wc.cpp in Sources */,
 				F74D25661BDEF24B0098DC27 /* main.cpp in Sources */,
 			);
@@ -243,6 +249,7 @@
 				F74D256B1BDEF24B0098DC27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

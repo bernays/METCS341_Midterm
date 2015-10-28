@@ -23,67 +23,50 @@ void Node::putNextPointer (Node* x){
     this->nextPtr = x;
 }
 Node* Node::putNode (Node* x, string s) {
-    Node* temp = new Node();
-    Node* temp2 = x;
+    Node* newNode = new Node();
+    Node* currentPtr = x;
 
-    Node* ListPointer = x;
+    Node* Head = x;
+    newNode->nextPtr = NULL;
+    newNode->st = s;
     
-    if (ListPointer == NULL){
-        if (temp) {
-            temp->nextPtr = NULL;
-            temp->st = s;
-            return temp;
-
-        }
+    if (Head == NULL){
+        return newNode;
     }
     else {
-        temp2 = x;
+        currentPtr = Head;
         Node* previousPtr;
+        Node* nextPtr = Head->getNextPointer();
         int j = 0;
-        previousPtr = NULL;
         bool breakout = true;
-        while(temp2->getNextPointer() && breakout){
-            if(s < temp2->getNodeData()) breakout = false;
-            previousPtr = temp2;
-            temp2 = temp2->getNextPointer();
+        while( currentPtr->getNextPointer() && breakout){
+            if (newNode->getNodeData() < currentPtr->getNodeData()) {
+                breakout = false;
+            }
+            currentPtr = currentPtr->getNextPointer();
+            if(j==0) {previousPtr = Head;}
+            else{a
+                previousPtr = previousPtr->getNextPointer();
+            }
 
             j++;
         };
-        if( j<1){
-            //previousPtr->putNextPointer(this);
-            if (temp) {
-                temp->nextPtr = temp2;
-                temp->st = s;
-            }
-            return temp;
-
+        
+        if(j==0){
+            newNode->putNextPointer(currentPtr);
+            return newNode;
         }
 
-        if( j>0){
-            previousPtr->putNextPointer(temp);
-            if (temp) {
-                if(temp2->getNextPointer()){
-                    temp->nextPtr =temp2;
+        if (j>0) {
 
-                }
-                else{
-                    temp->nextPtr = temp2;
+            newNode->putNextPointer(currentPtr);
 
-                }
-                temp->st = s;
-            }
-
-        }
+            previousPtr->putNextPointer(newNode);
+            return Head;}
     }
 
-    return x;
-
+    return Head;
     
-    
-    
-    
-    
-
 }
 string Node::getNodeData() {
     return st;
@@ -115,6 +98,7 @@ void BagList::getList() { // return value shoould be a string of concatenated va
 
 void BagList::getSortedList(){
     Node * temphead = ListPointer;
+    if(!temphead) return;
     Node* temp;
     int counter = 0;
     while (temphead)
