@@ -36,35 +36,40 @@ Node* Node::putNode (Node* x, string s) {
     else {
         currentPtr = Head;
         Node* previousPtr;
-        Node* nextPtr = Head->getNextPointer();
         int j = 0;
         bool breakout = true;
-        while( currentPtr->getNextPointer() && breakout){
-            if (newNode->getNodeData() < currentPtr->getNodeData()) {
+        
+        while(breakout){
+        
+            if(newNode->getNodeData() < currentPtr->getNodeData()){
                 breakout = false;
             }
-            currentPtr = currentPtr->getNextPointer();
-            if(j==0) {previousPtr = Head;}
-            else{a
-                previousPtr = previousPtr->getNextPointer();
+            
+            if(breakout){
+                previousPtr = currentPtr;
+                currentPtr = currentPtr->getNextPointer();
             }
-
-            j++;
-        };
+            if(!currentPtr){
+                breakout = false;
+            }
+        }
         
-        if(j==0){
-            newNode->putNextPointer(currentPtr);
+        //Put at Head:
+        if(currentPtr == Head){
+            newNode->putNextPointer(Head);
+            //newNode->putNextPointer(currentPtr->getNextPointer());
+            //currentPtr->putNextPointer(newNode);
             return newNode;
         }
-
-        if (j>0) {
-
+        else{
             newNode->putNextPointer(currentPtr);
-
             previousPtr->putNextPointer(newNode);
-            return Head;}
-    }
+            //newNode->putNextPointer(currentPtr);
+            return Head;
+        }
 
+        
+    }
     return Head;
     
 }
