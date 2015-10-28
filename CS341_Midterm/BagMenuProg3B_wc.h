@@ -14,31 +14,5 @@
 using namespace std;
 
 
-class Node {
-public:
-    Node () {}
-    Node* putNode (Node*, string);
-    string getNodeData ();
-    Node* getNextPointer ();
-    void putNextPointer (Node*);
-private:
-    string st;
-    Node* nextPtr;
-};
-//#include "BagList.h"
-class BagList {  //Container class
-public:
-    BagList ();
-    bool putANode (string);
-    void getList ();
-    Node* findNode (string);
-    void  deleteNode (string);
-    void getSortedList2();
-    void getSortedList();
-
-    //bool swap(Node*, Node*);
-private:
-    Node* ListPointer;
-};
 
 #endif /* BagMenuProg3B_wc_h */
